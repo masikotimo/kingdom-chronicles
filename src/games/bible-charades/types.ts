@@ -34,3 +34,18 @@ export interface GameState {
   roundScore: number;
   questionsAnswered: number;
 }
+
+export interface GamePrompt {
+  title: string;
+  description: string;
+  scripture: string;
+  options: string[];
+  devotional: string;
+  imagePrompt: string;
+}
+
+// Update existing BibleStory interface
+export interface BibleStory extends GamePrompt {
+  id: string;
+  imageUrl: string;
+}
